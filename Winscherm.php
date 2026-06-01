@@ -1,3 +1,17 @@
+<?php
+require 'dbcon.php'; // database connectie
+
+// voorbeeld: speler heeft gewonnen
+$playerName = "Speler"; // verander dit als je een naam hebt
+
+// Opslaan in database (je moet wel een 'results' tabel hebben)
+$stmt = $db_connection->prepare("
+    INSERT INTO results (playerName, result) 
+    VALUES (:name, 'win')
+");
+$stmt->execute(['name' => $playerName]);
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
