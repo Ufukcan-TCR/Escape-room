@@ -7,8 +7,10 @@
   <title>Escape Room</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
+  <header>
+    
+  </header>
 
   <h1>Welkom</h1>
   <p>De button hieronder is alleen voor testdoeleinden bij het opstarten van het project. Deze pagina is bedoeld voor de
