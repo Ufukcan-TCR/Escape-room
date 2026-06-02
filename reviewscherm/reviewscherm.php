@@ -16,7 +16,7 @@
 
         <div class="room-select">
             <select>
-                <option>kies a room</option>
+                <option>choose a room</option>
                 <option>Room 1</option>
                 <option>Room 2</option>
                 <option>Room 3</option>
