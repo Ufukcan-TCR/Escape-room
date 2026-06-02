@@ -5,21 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escape Room</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    
+  <header class="containerH">
+    <div><img src="Img/Logo Indie.png" alt="Logo van onze web" height="100px"></div>
+    <div class="items">
+        <div class="selected">Home</div>
+        <div class="item"><a href="Account.php" class="item">Account</a></div>
+    </div>
+    <div class="item"><a href="Logging.php" class="item">Log in</a></div>
   </header>
 
-  <h1>Welkom</h1>
-  <p>De button hieronder is alleen voor testdoeleinden bij het opstarten van het project. Deze pagina is bedoeld voor de
-    uitleg van jullie escape room.</p>
-  <p>Via deze pagina gaat een team naar de aanmeldpagina</p>
-
-
-  <button><a href="./rooms/room_1.php">Klik hier voor een demonstratie van kamer
-      1</a></button>
+  <h1>Welkom bij Indie Escape!</h1>
+  <section>
+    <div class="section">
+      <figure>
+        <img src="Img/Create room.png" alt="Create room PNG" height="200px" class="roomImg">
+        <figcaption><button><a href="./rooms/room_1.php" class="roomT">Create Room</a></button></figcaption>
+      </figure>
+      <figure>
+        <img src="Img/Join room.png" alt="Join room PNG" height="200px" class="roomImg">
+        <figcaption><button><a href="" class="roomT">Join Room</a></button></figcaption>
+      </figure>
+    </div>
+    <div class="description">
+      <p>
+        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeren in zijn eigen perosnal Femboy
+      </p>
+    </div>
+  </section>
 
 </body>
 
