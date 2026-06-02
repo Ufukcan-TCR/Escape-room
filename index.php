@@ -31,7 +31,7 @@
     </div>
     <div class="description">
       <p>
-        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen perosnal Femboy
+        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen persoonlijke gaming console!
       </p>
     </div>
   </section>
