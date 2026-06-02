@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Pagina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>How was your experience</h1>
+        </header>
+
+        <div class="room-select">
+            <select>
+                <option>kies a room</option>
+                <option>Room 1</option>
+                <option>Room 2</option>
+                <option>Room 3</option>
+            </select>
+        </div>
+
+        <div class="review-section">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <h2>write a review</h2>
+
+            <textarea></textarea>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
