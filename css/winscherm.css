@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to bottom, #4ef037, #0b6e00);
+    color: #000;
+    text-align: center;
+}
+
+.top-icons {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.message-box {
+    background-color: white;
+    display: inline-block;
+    padding: 20px 50px;
+    margin-top: 1px;
+    margin-bottom: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.message-box h1 {
+    font-family: 'Impact', sans-serif;
+    font-style: italic;
+}
+
+.bottom-icons {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.home-btn {
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#ffffff;
+    color:#000;
+    font-weight:bold;
+    border-radius:8px;
+    text-decoration:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
