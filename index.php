@@ -37,6 +37,7 @@
   </section>
   <button><a href="Winscherm.php">Winscherm</a></button>
   <button><a href="Verliesscherm.php">Verliesscherm</a></button>
+  <button><a href="reviewscherm/reviewscherm.php">Reviewschrem</a></button>
 
   <footer>
     <p>Ufukcan Kaynar</p>
