@@ -31,11 +31,16 @@
     </div>
     <div class="description">
       <p>
-        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeren in zijn eigen perosnal Femboy
+        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen perosnal Femboy
       </p>
     </div>
   </section>
+  <button><a href="Winscherm.php">Winscherm</a></button>
+  <button><a href="Verliesscherm.php">Verliesscherm</a></button>
 
+  <footer>
+    <p>Ufukcan Kaynar</p>
+  </footer>
 </body>
 
 </html>
