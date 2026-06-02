@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #dcdcdc;
+    background-color: blue;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 
 /* Blauwe balk boven */
 header {
-    background-color: #4f87c9;
+    background-color: turquoise;
     padding: 35px 0;
     text-align: center;
 }
@@ -52,7 +52,7 @@ header h1 {
 
 .stars {
     font-size: 80px;
-    color: #333;
+    color: yellow;
     margin-bottom: 30px;
 }
 
@@ -69,4 +69,24 @@ textarea {
     resize: none;
     font-size: 18px;
     padding: 10px;
+}
+h2 {
+    color: turquoise;
+}
+
+textarea{
+
+justify-content: flex-end;
+
+
+}
+
+.submit-btn {
+    margin-top: 20px;
+    width: 180px;
+    height: 60px;
+    font-size: 24px;
+    border: 8px solid black;
+    background-color: white;
+    cursor: pointer;
 }

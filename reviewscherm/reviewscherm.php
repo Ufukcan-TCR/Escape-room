@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Pagina</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="review.css">
 </head>
 <body>
 
@@ -23,19 +23,22 @@
             </select>
         </div>
 
-        <div class="review-section">
+        
 
-            <div class="stars">
-                ★★★★★
-            </div>
+<div class="review-section">
 
-            <h2>write a review</h2>
-
-            <textarea></textarea>
-
-        </div>
-
+    <div class="stars">
+        ★★★★★
     </div>
 
+    <h2>write a review❤️</h2>
+
+    <textarea></textarea>
+
+    <br>
+
+    <button class="submit-btn">Submit</button>
+
+</div>
 </body>
 </html>
