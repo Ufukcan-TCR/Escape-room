@@ -1,15 +1,3 @@
-<?php
-require 'dbcon.php'; // database connectie
-
-// voorbeeld: speler heeft verloren
-$playerName = "Speler"; // verander dit als je een naam hebt
-
-$stmt = $db_connection->prepare("
-    INSERT INTO results (playerName, result) 
-    VALUES (:name, 'lose')
-");
-$stmt->execute(['name' => $playerName]);
-?>
 
 <!DOCTYPE html>
 <html lang="nl">

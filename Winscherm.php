@@ -1,16 +1,3 @@
-<?php
-require 'dbcon.php'; // database connectie
-
-// voorbeeld: spelernaam (pas aan als je een echte naam hebt)
-$playerName = "Speler";
-
-// Opslaan in database
-$stmt = $db_connection->prepare("
-    INSERT INTO results (playerName, result) 
-    VALUES (:name, 'win')
-");
-$stmt->execute(['name' => $playerName]);
-?>
 
 <!DOCTYPE html>
 <html lang="nl">
