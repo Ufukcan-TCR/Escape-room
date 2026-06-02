@@ -1,10 +1,10 @@
 <?php
 require 'dbcon.php'; // database connectie
 
-// voorbeeld: speler heeft gewonnen
-$playerName = "Speler"; // verander dit als je een naam hebt
+// voorbeeld: spelernaam (pas aan als je een echte naam hebt)
+$playerName = "Speler";
 
-// Opslaan in database (je moet wel een 'results' tabel hebben)
+// Opslaan in database
 $stmt = $db_connection->prepare("
     INSERT INTO results (playerName, result) 
     VALUES (:name, 'win')
@@ -45,6 +45,17 @@ $stmt->execute(['name' => $playerName]);
             font-size: 30px;
             margin-top: 50px;
         }
+        .home-btn {
+            display:inline-block;
+            margin-top:30px;
+            padding:12px 25px;
+            background:#ffffff;
+            color:#000;
+            font-weight:bold;
+            border-radius:8px;
+            text-decoration:none;
+            box-shadow:0 0 10px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
@@ -55,6 +66,8 @@ $stmt->execute(['name' => $playerName]);
     <div class="message-box">
         <h1>Het is je gelukt!</h1>
         <p>Je hebt elke puzzel en raadsel opgelost,<br>je bent een echte indie-expert!</p>
+
+        <a href="index.php" class="home-btn">Terug naar homepage</a>
     </div>
 
     <div class="bottom-icons">
