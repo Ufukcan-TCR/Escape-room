@@ -19,8 +19,9 @@
         .message-box {
             background-color: white;
             display: inline-block;
-            padding: 20px 40px;
-            margin-top: 100px;
+            padding: 20px 50px;
+            margin-top: 1px;
+            margin-bottom: 400px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
