@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="containerH">
-    <div><img src="Img/Logo Indie.png" alt="Logo van onze web" height="100px"></div>
+    <div class="logo"><img src="Img/Logo Indie.png" alt="Logo van onze web" height="100px"> <h2 class="logo">Indie<br>Escape</h2></div>
     <div class="items">
         <div class="selected">Home</div>
         <div class="item"><a href="Account.php" class="item">Account</a></div>
@@ -22,7 +22,7 @@
     <div class="section">
       <figure>
         <img src="Img/Create room.png" alt="Create room PNG" height="200px" class="roomImg">
-        <figcaption><button><a href="./rooms/room_1.php" class="roomT">Create Room</a></button></figcaption>
+        <figcaption><button><a href="Create.php" class="roomT">Create Room</a></button></figcaption>
       </figure>
       <figure>
         <img src="Img/Join room.png" alt="Join room PNG" height="200px" class="roomImg">
@@ -31,7 +31,11 @@
     </div>
     <div class="description">
       <p>
+<<<<<<< Updated upstream
         Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen persoonlijke gaming console!
+=======
+        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen personal Femboy
+>>>>>>> Stashed changes
       </p>
     </div>
   </section>
