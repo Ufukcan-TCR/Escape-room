@@ -31,11 +31,7 @@
     </div>
     <div class="description">
       <p>
-<<<<<<< Updated upstream
         Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen persoonlijke gaming console!
-=======
-        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen personal Femboy
->>>>>>> Stashed changes
       </p>
     </div>
   </section>

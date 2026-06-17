@@ -19,7 +19,7 @@
     <div class="section">
       <figure>
         <img src="Img/Create room.png" alt="Create room PNG" height="200px" class="roomImg">
-        <figcaption><button><a href="rooms/escape_room.php" class="roomT">Create Room</a></button></figcaption>
+        <figcaption><button><a href="rooms/room-1.php" class="roomT">Create Room</a></button></figcaption>
       </figure>
       <figure>
         <img src="Img/Coming soon.jpg" alt="Join room PNG" height="200px" class="roomImg">

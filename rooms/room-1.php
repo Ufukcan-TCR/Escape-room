@@ -1,0 +1,1 @@
+<?php $roomId = 1; require_once('../room_template.php'); ?>
