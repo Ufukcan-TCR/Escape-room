@@ -1,3 +1,38 @@
+<?php
+require_once('dbcon.php');
+
+// TEAM AANMAKEN
+if (isset($_POST['create_team'])) {
+    $teamName = $_POST['teamName'];
+
+    $stmt = $db_connection->prepare("INSERT INTO teams (teamName) VALUES (:teamName)");
+    $stmt->execute(['teamName' => $teamName]);
+}
+
+// TEAM JOINEN
+if (isset($_POST['join_team'])) {
+    $teamId = $_POST['teamId'];
+    $playerName = $_POST['playerName'];
+
+    $stmt = $db_connection->prepare("INSERT INTO team_members (teamId, playerName) VALUES (:teamId, :playerName)");
+    $stmt->execute(['teamId' => $teamId, 'playerName' => $playerName]);
+}
+
+// TEAM VERWIJDEREN
+if (isset($_POST['delete_team'])) {
+    $teamId = $_POST['teamId'];
+
+    $stmt = $db_connection->prepare("DELETE FROM teams WHERE id = :id");
+    $stmt->execute(['id' => $teamId]);
+}
+
+// ALLE TEAMS OPHALEN
+$teams = $db_connection->query("SELECT * FROM teams")->fetchAll(PDO::FETCH_ASSOC);
+
+// TEAMLEDEN OPHALEN
+$teamMembers = $db_connection->query("SELECT * FROM team_members")->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,14 +66,62 @@
     </div>
     <div class="description">
       <p>
-<<<<<<< Updated upstream
         Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen persoonlijke gaming console!
-=======
-        Je bent in een kamer gesloten door je vriend die niet goed in de hoofd is. Escape de room zodat hij je niet transformeert in zijn eigen personal Femboy
->>>>>>> Stashed changes
       </p>
     </div>
   </section>
+
+  <!-- TEAM SYSTEEM -->
+  <h2>Teams</h2>
+
+  <!-- TEAM AANMAKEN -->
+  <form method="POST">
+      <input type="text" name="teamName" placeholder="Team naam" required>
+      <button type="submit" name="create_team">Team aanmaken</button>
+  </form>
+
+  <br>
+
+  <!-- TEAMLIJST -->
+  <h3>Bestaande teams:</h3>
+
+  <?php foreach ($teams as $team): ?>
+      <div style="margin-bottom: 10px; border: 1px solid #ccc; padding: 10px;">
+          <strong><?php echo htmlspecialchars($team['teamName']); ?></strong>
+
+          <!-- JOIN TEAM -->
+          <form method="POST" style="display:inline-block; margin-left: 10px;">
+              <input type="hidden" name="teamId" value="<?php echo $team['id']; ?>">
+              <input type="text" name="playerName" placeholder="Jouw naam" required>
+              <button type="submit" name="join_team">Join</button>
+          </form>
+
+          <!-- DELETE TEAM -->
+          <form method="POST" style="display:inline-block; margin-left: 10px;">
+              <input type="hidden" name="teamId" value="<?php echo $team['id']; ?>">
+              <button type="submit" name="delete_team">Verwijderen</button>
+          </form>
+
+          <!-- TEAMLEDEN TONEN -->
+          <div style="margin-top: 10px; padding-left: 10px;">
+              <em>Teamleden:</em><br>
+              <?php
+              $found = false;
+              foreach ($teamMembers as $member) {
+                  if ($member['teamId'] == $team['id']) {
+                      echo "- " . htmlspecialchars($member['playerName']) . "<br>";
+                      $found = true;
+                  }
+              }
+              if (!$found) {
+                  echo "<span style='color: gray;'>Nog geen teamleden</span>";
+              }
+              ?>
+          </div>
+
+      </div>
+  <?php endforeach; ?>
+
   <button><a href="Winscherm.php">Winscherm</a></button>
   <button><a href="Verliesscherm.php">Verliesscherm</a></button>
   <button><a href="reviewscherm/reviewscherm.php">Reviewschrem</a></button>
