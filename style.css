@@ -160,3 +160,72 @@ h2 {
   margin-left: 10px;
   font-size: 28px;
 }
+
+.rooms-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 20px 80px;
+}
+
+.room-section {
+  width: 100%;
+  max-width: 700px;
+}
+
+.room-section h2 {
+  color: #1AE49A;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.box.answered-correct {
+  background-color: #1a7a4a;
+  cursor: default;
+}
+
+.box.answered-wrong {
+  background-color: #7a1a1a;
+  cursor: default;
+}
+
+.box .result-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.box .box-label {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.modal {
+  background: #1a3a5c;
+  color: white;
+}
+
+.modal h2 {
+  color: #1AE49A;
+}
+
+.modal p {
+  color: #cde;
+  font-size: 17px;
+}
+
+.modal input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#feedback {
+  font-size: 36px;
+  min-height: 44px;
+  margin-top: 8px;
+}
