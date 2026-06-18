@@ -1,3 +1,4 @@
+// Gemaakt door: Nizar
 const TIMER_MINUTES = 5;
 
 

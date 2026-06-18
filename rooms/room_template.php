@@ -1,4 +1,5 @@
 <?php
+// Gemaakt door: Ufukcan/ Jezion/ Nizar
 require_once('../dbcon.php');
 
 $roomImages = [
@@ -51,9 +52,9 @@ try {
     <h1>🚪 Kamer <?php echo $roomId; ?></h1>
     <div id="timer-display">⏱ 05:00</div>
     <nav class="room-nav">
-      <a href="../rooms/room_1.php" <?php if ($roomId == 1) echo 'class="current"'; ?>>Kamer 1</a>
-      <a href="../rooms/room_2.php" <?php if ($roomId == 2) echo 'class="current"'; ?>>Kamer 2</a>
-      <a href="../rooms/room_3.php" <?php if ($roomId == 3) echo 'class="current"'; ?>>Kamer 3</a>
+      <a href="room-1.php" <?php if ($roomId == 1) echo 'class="current"'; ?>>Kamer 1</a>
+      <a href="room-2.php" <?php if ($roomId == 2) echo 'class="current"'; ?>>Kamer 2</a>
+      <a href="room-3.php" <?php if ($roomId == 3) echo 'class="current"'; ?>>Kamer 3</a>
     </nav>
   </div>
 

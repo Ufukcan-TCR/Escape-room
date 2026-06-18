@@ -1,4 +1,5 @@
 <?php
+// Gemaakt door: Ufukcan/ Nizar
 require_once('dbcon.php');
 
 // TEAM AANMAKEN
