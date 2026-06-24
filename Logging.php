@@ -1,45 +1,80 @@
 <?php
-// Gemaakt door: Jezion
-require_once 'config.php';
-
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
+// Gemaakt door: Jezion (gefixed)
+require_once 'dbcon.php';
+session_start();
+ 
+// Al ingelogd? Stuur door naar home
+if (isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
+ 
+$error = '';
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
-
-    $check_sql = "SELECT * FROM users WHERE username='$username'";
-    $check_result = $conn->query($check_sql);
-
-    if ($check_result->num_rows > 0) {
-        echo "Gebruikersnaam is al in gebruik. Kies een andere.";
+ 
+    if ($username === '' || $password === '') {
+        $error = 'Vul alle velden in.';
     } else {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $insert_sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
-        if ($conn->query($insert_sql) === TRUE) {
-            echo "Registratie successvol";
+        $stmt = $db_connection->prepare("SELECT * FROM users WHERE username = :username");
+        $stmt->execute(['username' => $username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user_id']  = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role']     = ($user['is_admin'] == 1) ? 'admin' : 'user';
+ 
+            header('Location: index.php');
+            exit();
         } else {
-            echo "Fout bij registratie: " . $conn->error;
+            $error = 'Ongeldige gebruikersnaam of wachtwoord.';
         }
     }
-}  
+}
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inloggen – Indie Escape</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Registratie</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-        <label for="username">Gebruikersnaam:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Wachtwoord:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Registreren</button>
-    </form>
-    <p>Heb je al een account? <a href="login.php">Log hier in</a>.</p>
-
+    <header class="containerH">
+        <div class="logo">
+            <img src="Img/Logo Indie.png" alt="Logo" height="100px">
+            <h2 class="logo">Indie<br>Escape</h2>
+        </div>
+        <div class="items">
+            <div class="item"><a href="index.php" class="item">Home</a></div>
+        </div>
+        <div class="item"><a href="register.php" class="item">Registreren</a></div>
+    </header>
+ 
+    <div class="auth-box">
+        <h2>Inloggen</h2>
+ 
+        <?php if ($error): ?>
+            <p class="error"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+ 
+        <form method="POST">
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" id="username" name="username"
+                   value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"
+                   required autofocus>
+ 
+            <label for="password">Wachtwoord</label>
+            <input type="password" id="password" name="password" required>
+ 
+            <button type="submit">Inloggen</button>
+        </form>
+ 
+        <p class="link">Nog geen account? <a href="register.php">Registreer hier</a>.</p>
+    </div>
 </body>
 </html>

@@ -273,3 +273,50 @@ h2 {
 
 .room-nav a:hover { background: #0BC4A8; }
 .room-nav a.current { background: #0BC4A8; pointer-events: none; }
+
+.auth-box {
+  background: #1a3a5c;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 36px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  text-align: left;
+}
+.auth-box h2 {
+  color: #1AE49A;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+.auth-box label {
+  color: #cde;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+.auth-box input[type="text"],
+.auth-box input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+.auth-box button {
+  width: 100%;
+  margin-top: 4px;
+  background: #00B0CB;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.auth-box button:hover { background: #0BC4A8; }
+.auth-box .error { color: #ff6b6b; margin-bottom: 14px; font-size: 15px; }
+.auth-box .link { color: #0BC4A8; margin-top: 16px; font-size: 14px; }
+.auth-box .link a { color: #1AE49A; }
